@@ -3,14 +3,20 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
 import NavBar from './components/NavBar'
+import Home from './pages/home'
+import About from './pages/about'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='h-full'>
-      <NavBar/>
-    </div>
+    <Routes>
+      <Route path={'/'} element={<Home/>}/>
+      <Route path= {'/about'} element = {<About/>}/>
+
+      <Route path={'*'} element={<Home/>}/>
+    </Routes>
   )
 }
 
