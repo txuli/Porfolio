@@ -5,6 +5,7 @@ import GithubLogo from './media/github-mark-white.png'
 import backend from './media/icons8-backend-50.png'
 import ImgDatabase from './media/icons8-database-50.png'
 import ImgReact from './media/React.png'
+
 const Home = () =>{
     return (
         <div className="h-screen">

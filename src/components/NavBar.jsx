@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useNavigate, Link } from 'react-router-dom'
+import ImgMenu from './media/icons8-menu.svg'
 function App({ }) {
   const navigate = useNavigate()
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
@@ -32,7 +33,7 @@ function App({ }) {
         </div>
       ) : (
         <div className='w-96 flex px-1'>
-          <div onClick={() => { Menu_click() }} className='fixed z-20 object-cover filter invert'><img src="src/components/media/icons8-menu.svg" alt="" /></div>
+          <div onClick={() => { Menu_click() }} className='fixed z-20 object-cover filter invert'><img src={ImgMenu} alt="" /></div>
 
           <div className= {`h-full fixed z-10 bg-zinc-700 w-32 ${isOpen ? 'grid grid-rows-12 left-0 ' : 'hidden'}`}>
             <div className='grid grid-rows-3 row-start-2 gap-7'>
@@ -40,7 +41,6 @@ function App({ }) {
               <Link to='/about' className='h-3 text-center '> about</Link>
               <Link to='/projects' className='h-3 text-center '> projects</Link>
             </div>
-
           </div>
 
           <Outlet />
