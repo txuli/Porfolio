@@ -31,21 +31,21 @@ const Home = () =>{
                         <div className='w-3/4 bg-zinc-600 rounded-md border-2 border-solid border-zinc-700 drop-shadow-[0_5px_5px_rgb(0,0,5)] p-2 mx-3  sm: my-6'>
                             <div className='w-full flex justify-center'><img src={backend} alt="backend image" className=' object-cover filter invert '/></div>
                             <div><h2 className='text-lg w-full flex justify-center'><b>Backend</b></h2></div>
-                            <div className='content-center'>I want to learn more about APIS for the requests of the server and make a new project about photography.</div>
+                            <div className='content-center text-center'>I want to learn more about APIS for the requests of the server and make a new fotography project.</div>
                         </div>
                     </div>
                     <div className='flex justify-center'>
                         <div className='w-3/4 bg-zinc-600 rounded-md border-2 border-solid border-zinc-700 drop-shadow-[0_5px_5px_rgb(0,0,5)] p-2 mx-3 my-6'>
                             <div className='w-full flex justify-center'><img src={ImgDatabase} alt="database image" className='filter invert '/></div>
                             <div><h2 className='text-lg w-full flex justify-center'><b>Databases</b></h2></div>
-                            <div className='content-center'>I want to learn databases to create different parts of my future projects.</div>
+                            <div className='content-center text-center'>I want to learn databases to create different parts of my future projects.</div>
                         </div>
                     </div>
                     <div className='flex justify-center'>
                         <div className='w-3/4 bg-zinc-600 rounded-md border-2 border-solid border-zinc-700 drop-shadow-[0_5px_5px_rgb(0,0,5)] p-2 mx-3 my-6'>
                             <div className='w-full flex justify-center'><img src= {ImgReact}  className='filter invert'/></div>
                             <div><h2 className='text-lg w-full flex justify-center'><b>React</b></h2></div>
-                            <div className='content-center'>I want to improve my skills in react to improve my webs in the future.</div>
+                            <div className='content-center text-center'>I want to improve my skills in react to improve my webs in the future.</div>
                         </div>
                     </div>
                 </div>
