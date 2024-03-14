@@ -6,7 +6,6 @@ function App({ }) {
   const navigate = useNavigate()
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
   const [isOpen, setIsOpen] = useState(false)
-
   // Comentar en release
   useEffect(() => {
     setInterval(() => {
@@ -19,7 +18,7 @@ function App({ }) {
   }
   return (
     <div>
-      {screenWidth > 600 ? (
+      {screenWidth > 710 ? (
         <div className='w-full grid grid-cols-3 px-1'>
           <h1 className='flex w-auto mx-5 items-center mt-5 '>My life programming</h1>
           <div className='flex items-center justify-center'>
