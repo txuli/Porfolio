@@ -7,7 +7,7 @@ import Home from './pages/home'
 import About from './pages/about'
 import { Routes, Route } from 'react-router-dom'
 import Projects from './pages/Projects'
-import NotFound from './pages/NotFound'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +17,7 @@ function App() {
       <Route path={'/'} element={<Home/>}/>
       <Route path= {'/about'} element = {<About/>}/>
       <Route path={'/projects'} element= {<Projects/>}/>
-      <Route path={'*'} element={<NotFound/>}/>
+      <Route path={'*'} element={<Home/>}/>
     </Routes>
   )
 }
