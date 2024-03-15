@@ -25,20 +25,20 @@ function App({ }) {
             <div className='bg-zinc-800 w-auto h-16 flex items-center text-center gap-4 mt-5 rounded-md px-4 '>
               <Link to="/home" className='flex items-center cursor-pointer transition px-5 bg-zinc-500 h-10 rounded-md'> Home</Link>
               <Link to="/about" className='flex items-center cursor-pointer transition px-5 bg-zinc-500 h-10 rounded-md w-28'> About me</Link>
-              <a href="/projects" className='flex items-center cursor-pointer transition px-5 bg-zinc-500 h-10 rounded-md'> Projects</a>
+              <Link to="/projects" className='flex items-center cursor-pointer transition px-5 bg-zinc-500 h-10 rounded-md'> Projects</Link>
             </div>
             <Outlet />
           </div>
         </div>
       ) : (
-        <div className='w-96 flex px-1'>
+        <div className='w-full flex px-1'>
           <div onClick={() => { Menu_click() }} className='fixed z-20 object-cover filter invert'><img src={ImgMenu} alt="" /></div>
 
-          <div className= {`h-full fixed z-10 bg-zinc-700 w-32 ${isOpen ? 'grid grid-rows-12 left-0 ' : 'hidden'}`}>
-            <div className='grid grid-rows-3 row-start-2 gap-7'>
-              <Link to='/home' className='h-3 block  text-center '>home</Link>
-              <Link to='/about' className='h-3 text-center '> about</Link>
-              <Link to='/projects' className='h-3 text-center '> projects</Link>
+          <div className={`menu w-full mt-8 flex overflow-hidden transition-height duration-300 ease-in-out ${isOpen ? 'h-36' : 'h-0'}`}>
+            <div className='grid grid-rows-3 row-start-2 w-full'>
+              <Link to='/home' className=' flex justify-center  text-center '>home</Link>
+              <Link to='/about' className=' text-center '> about</Link>
+              <Link to='/projects' className=' text-center '> projects</Link>
             </div>
           </div>
 

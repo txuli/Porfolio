@@ -1,6 +1,6 @@
 import NavBar from '../components/NavBar'
 
-const Home = () =>{
+const About = () =>{
     return (
         <div className="h-screen">
             <NavBar />
@@ -17,4 +17,4 @@ const Home = () =>{
     );
 }
 
-export default Home;
+export default About;
