@@ -18,7 +18,7 @@ const Home = () => {
                     <div className='mx-3'>
                         <div className='justify-center text w-15'>Asier Alberdi</div>
                         <div className='w-15 text-zinc-400'>@Txuli</div>
-                        <div className='w-7'><a href="https://github.com/Txuli17" target='blank'><img src={GithubLogo} alt="github" className='h-7' /></a></div>
+                        <div className='w-7'><a href="https://github.com/txuli" target='blank'><img src={GithubLogo} alt="github" className='h-7' /></a></div>
 
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const Home = () => {
             <div className='w-full flex justify-center'>
                 <div className='grid'>
                     <h2 className='text-center'><b>Contact</b></h2>
-                    <a href="mailto:asieralberdilopez@gmail.com">Send me an email</a>
+                    <a href="mailto:a.alberdi@txuli.com">Send me an email</a>
                 </div>
             </div>
             <Footer />
