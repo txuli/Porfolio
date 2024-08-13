@@ -9,6 +9,10 @@ import ImgReact from './media/React.png'
 const Home = () => {
     return (
         <div className="h-screen">
+            <div className="absolute inset-0 ">
+                <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#800080_100%)]"></div>
+                <div class="relative h-full w-full "><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div>
+            </div>
             <NavBar />
 
             <div className='flex justify-center'>
@@ -29,14 +33,14 @@ const Home = () => {
             <div className='grid sm:grid-cols-3 xl:grid-flow-row mx-3'>
                 <div className='flex justify-center'>
                     <div className='w-3/4 bg-zinc-600 rounded-md border-2 border-solid border-zinc-700 drop-shadow-[0_5px_5px_rgb(0,0,5)] p-2 mx-3  sm: my-6'>
-                        <div className='w-full flex justify-center'><img src={backend} alt="backend image"  /></div>
+                        <div className='w-full flex justify-center'><img src={backend} alt="backend image" /></div>
                         <div><h2 className='text-lg w-full flex justify-center'><b>Backend</b></h2></div>
                         <div className='content-center text-center'>I want to learn more about APIS for the requests of the server and make a new fotography project.</div>
                     </div>
                 </div>
                 <div className='flex justify-center'>
                     <div className='w-3/4 bg-zinc-600 rounded-md border-2 border-solid border-zinc-700 drop-shadow-[0_5px_5px_rgb(0,0,5)] p-2 mx-3 my-6'>
-                        <div className='w-full flex justify-center'><img src={ImgDatabase} alt="database image"  /></div>
+                        <div className='w-full flex justify-center'><img src={ImgDatabase} alt="database image" /></div>
                         <div><h2 className='text-lg w-full flex justify-center'><b>Databases</b></h2></div>
                         <div className='content-center text-center'>I want to learn databases to create different parts of my future projects.</div>
                     </div>
