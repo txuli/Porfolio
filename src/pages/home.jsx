@@ -5,6 +5,7 @@ import GithubLogo from './media/github-mark-white.png'
 import backend from './media/icons8-backend-50.png'
 import ImgDatabase from './media/icons8-database-50.png'
 import ImgReact from './media/React.png'
+import CmdInfo from '../components/cmdInfo';
 
 const Home = () => {
     return (
@@ -13,7 +14,8 @@ const Home = () => {
                 <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#800080_100%)]"></div>
                 <div class="relative h-full w-full "><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div>
             </div>
-            <NavBar />
+            <CmdInfo />
+            {/* <NavBar />
 
             <div className='flex justify-center'>
                 <div className='bg-zinc-600 flex justify-center items-center lg:w-2/6 my-9 py-6 rounded-md border-2 border-solid border-zinc-700 drop-shadow-[0_5px_5px_rgb(0,0,5)] sm:w-/4'>
@@ -58,7 +60,7 @@ const Home = () => {
                     <h2 className='text-center'><b>Contact</b></h2>
                     <a href="mailto:a.alberdi@txuli.com">Send me an email</a>
                 </div>
-            </div>
+            </div> */}
             <Footer />
         </div>
     );
