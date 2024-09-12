@@ -6,6 +6,8 @@ import backend from './media/icons8-backend-50.png'
 import ImgDatabase from './media/icons8-database-50.png'
 import ImgReact from './media/React.png'
 import CmdInfo from '../components/cmdInfo';
+import Title from '../components/Title';
+import Effect from '../components/Effect';
 
 const Home = () => {
     return (
@@ -14,6 +16,16 @@ const Home = () => {
                 <div class="absolute inset-0 -z-10 h-full w-full items-center  [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#800080_100%)]"></div>
                 <div class="relative h-full w-full "><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div>
             </div>
+        <Title />
+        <Effect
+        text="Portfolio"
+        mLeftInicial={'-200'}
+        transitionTime={2}
+        tickCambioLetra={200}
+        randCar={null}
+        fontSize={30}
+         />
+       
             <CmdInfo />
             {/* <NavBar />
 
