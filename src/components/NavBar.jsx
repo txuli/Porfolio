@@ -1,13 +1,58 @@
 import { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useNavigate, Link } from 'react-router-dom'
-import ImgMenu from './media/icons8-menu.svg'
+import ImgMenu from './media/home.svg'
 const NavBar = () => {
-return(
-  <div>
-    
-  </div>
-)
+  const [isInUpperZone, setIsInUpperZone] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const windowHeight = window.innerHeight;
+      const cursorY = event.clientY;
+      const upperLimit = windowHeight * 0.3; // El 30% superior de la ventana
+
+      if (cursorY < upperLimit) {
+        setIsInUpperZone(true); // Si el cursor está en la parte media-alta
+      } else {
+        setIsInUpperZone(false); // Si el cursor está en la parte inferior
+      }
+    };
+
+    // Agregamos el evento de movimiento del ratón
+    window.addEventListener('mousemove', handleMouseMove);
+
+    // Limpieza del evento cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+return (
+  <>
+    <div className="justify-center flex">
+      <div>
+        <div
+          className={` bg-gray-600/10 border-2 transition-all duration-300 border-gray-700/50 rounded-2xl mt-1 ${
+            isInUpperZone ? 'w-96' : 'w-12'
+          }`}
+        >
+          <img
+            src={ImgMenu}
+            alt=""
+            className={`filter invert h-10 transition-all duration-150 px-1 `}
+          />
+          <div
+            className={`justify-center absolute flex transition-opacity duration-250 mt-1 ${
+              isInUpperZone ? 'opacity-100 delay-150' : 'opacity-0'
+            }`}
+          >
+            project
+          </div>
+        </div>
+      </div>
+    </div>
+  </>
+);
 }
 export default NavBar
 // function App({ }) {
