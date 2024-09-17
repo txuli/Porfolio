@@ -12,8 +12,8 @@ export default function Title() {
             transitionTime={2}
             tickCambioLetra={200}
             randCar={null}
-            fontSize={50 }
-          
+            fontSize={60}
+            marginLeftDiv={30}
             />
            
            </>

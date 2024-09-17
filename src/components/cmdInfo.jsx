@@ -4,20 +4,20 @@ import InfoDiv from './infoDiv';
 
 const CmdInfo = () => {
     
-    const instaLink = () => {
+    const sapo = () => {
         alert('Are you sure you want to leave this page?');
         window.location.href= 'https://i0.wp.com/exploramag.com/wp-content/uploads/2023/03/sapo-1.jpg?resize=1360%2C907&ssl=1';
     }
     return (
         <div className=' flex justify-center w-full'>
-            <div className='h-3/6 w-2/6 border-neutral-600 bg-black rounded-md border-2 relative mt-28 ml-9 '>
+            <div className='h-3/6 w-3/6 border-neutral-600 bg-black rounded-md border-2 relative mt-28 ml-9 '>
             <div className='w-full bg-gray-600/ h-7 relative grid grid-cols-3'>
                 <div className='w-full bg-gray-600/ h-7 relative flex items-center ml-2'>
-                    <div className='h-3 w-3 rounded-full bg-red-700 mr-1 hover:animate-breathing' onClick={instaLink}></div>
+                    <div className='h-3 w-3 rounded-full bg-red-700 mr-1 hover:animate-breathing' onClick={sapo}></div>
                     <div className='h-3 w-3 rounded-full bg-yellow-500 mr-1 hover:animate-breathing'></div>
                     <div className='h-3 w-3 rounded-full bg-green-700 mr-1 hover:animate-breathing'></div>
                 </div>
-                <div className=''>
+                <div >
                     root@txuli: /portfolio/txuli
                 </div>
                 <div>

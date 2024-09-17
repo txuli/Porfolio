@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export default function Effect({ text, mLeftInicial = -180, transitionTime = 2, randCar, tickCambioLetra = 150, fontSize }) {
+export default function Effect({ text, mLeftInicial = -180, transitionTime = 2, randCar, tickCambioLetra = 150, fontSize, marginLeftDiv }) {
     const [marginLeft, setMarginLeft] = useState(mLeftInicial ? mLeftInicial : 0)
     const caracteresRandom = randCar ? randCar : ['$', '%', '#', '@', '*', 'R', 'H', 'A', '4', 'P', '0', 'O', 'F']
     const [newText, setNewText] = useState('')
@@ -47,8 +47,10 @@ export default function Effect({ text, mLeftInicial = -180, transitionTime = 2, 
     }, [])
 
     return (
-        <div>
-            <h1 className={`encryptClassH2 relative tracking-wide font-extrabold`} style={{
+        <div style={{
+            marginLeft: `${marginLeftDiv}px`,
+        }}>
+            <h1 className={`encryptClassH2 relative tracking-wide font-extrabold ibm-plex-mono-regular`} style={{
                 marginLeft: `${marginLeft}px`,
                 transition: `margin ${transitionTime}s`,
                 fontSize: `${fontSize}px`,
