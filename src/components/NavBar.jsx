@@ -27,32 +27,41 @@ const NavBar = () => {
     };
   }, []);
 
-return (
-  <>
-    <div className="justify-center flex">
-      <div>
-        <div
-          className={` bg-gray-600/10 border-2 transition-all duration-300 border-gray-700/50 rounded-2xl mt-1 ${
-            isInUpperZone ? 'w-96' : 'w-12'
-          }`}
-        >
-          <img
-            src={ImgMenu}
-            alt=""
-            className={`filter invert h-10 transition-all duration-150 px-1 `}
-          />
+  return (
+    <>
+      <div className="justify-center flex">
+        <div className="relative">
           <div
-            className={`justify-center absolute flex transition-opacity duration-250 mt-1 ${
-              isInUpperZone ? 'opacity-100 delay-150' : 'opacity-0'
-            }`}
+            className={`bg-gray-600/10 border-2 transition-all duration-300 border-gray-700/50 rounded-2xl mt-1 ${isInUpperZone ? 'w-96' : 'w-12'
+              }`}
           >
-            project
+            <div className='w-11'>
+            <a href="/">
+              <img
+                src={ImgMenu}
+                alt=""
+                className={`filter invert h-10 transition-all duration-150 px-1`}
+              />
+            </a>
+            </div>
+            <div
+              className={`absolute right-2 top-2 transition-opacity duration-250 mt-1 ${isInUpperZone ? 'opacity-100 delay-150' : 'opacity-0'
+                }`}
+            >
+              <a href="/logIn">Log In</a>
+            </div>
+            <div
+              className={`absolute right-20 top-2 transition-opacity duration-250 mt-1 ${isInUpperZone ? 'opacity-100 delay-150' : 'opacity-0'
+                }`}
+            >
+              <a href="/about">About</a>
+            </div>
+
           </div>
         </div>
       </div>
-    </div>
-  </>
-);
+    </>
+  );
 }
 export default NavBar
 // function App({ }) {
