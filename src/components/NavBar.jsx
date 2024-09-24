@@ -29,7 +29,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="justify-center flex">
+      <div className="justify-center flex relative z-50">
         <div className="relative">
           <div
             className={`bg-gray-600/10 border-2 transition-all duration-300 border-gray-700/50 rounded-2xl mt-1 ${isInUpperZone ? 'w-96' : 'w-12'

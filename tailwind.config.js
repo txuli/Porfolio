@@ -15,6 +15,10 @@ export default {
       animation: {
         breathing: 'breathing 2s infinite',
       },
+      colors: {
+        'purpleSymply': '#800080',
+        'purpleColorDegrade': 'rgba(145, 2, 145, 0.432)',
+      },
     },
   },
   plugins: [],

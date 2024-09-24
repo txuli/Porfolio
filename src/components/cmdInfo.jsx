@@ -10,7 +10,7 @@ const CmdInfo = () => {
     }
     return (
         <div className=' flex justify-center w-full'>
-            <div className='h-3/6 w-3/6 border-neutral-600 bg-black rounded-md border-2 relative mt-28 ml-9 '>
+            <div className='h-3/6 w-3/6 border-neutral-600 bg-black rounded-md border-2 relative mt-2 ml-9 '>
                 <div className='w-full bg-gray-600/ h-7 relative grid grid-cols-3 '>
                     <div className='w-full bg-gray-600/ h-7 relative flex items-center ml-2'>
                         <div className='h-3 w-3 rounded-full bg-red-700 mr-1 hover:animate-breathing' onClick={sapo}></div>
@@ -46,7 +46,10 @@ const CmdInfo = () => {
                 </div>
                 <div className='grid  grid-cols-6'>
                     <div
-                        className='mr-2 col-span-2'>root@txuli: /portfolio/txuli$
+                        className=' col-span-2'>
+                        <div className='ml-1'>
+                        root@txuli: /portfolio/txuli$
+                        </div>
                     </div>
                     <textarea name="commandLine" id="1" placeholder='Write different commands' className='w-full h-8 resize-none bg-black border-none focus:outline-none col-span-4'></textarea>
                 </div>

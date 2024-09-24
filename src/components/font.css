@@ -84,4 +84,7 @@
   .purpleColor{
     background-color: #800080;
   }
+  .purpleColorDegrade{
+    background-color: rgba(145, 2, 145, 0.432);
+  }
   

@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar'
 const About = () =>{
     return (
         <div className="h-screen">
-            <NavBar />
+            
             <div className='my-7 w-full grid grid-cols-7'>
             <div className='col-start-2 col-span-2'>
             <h1 className='text-xl'><b>About me</b></h1>

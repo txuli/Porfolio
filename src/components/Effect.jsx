@@ -50,7 +50,7 @@ export default function Effect({ text, mLeftInicial = -180, transitionTime = 2, 
         <div style={{
             marginLeft: `${marginLeftDiv}px`,
         }}>
-            <h1 className={`encryptClassH2 relative tracking-wide font-extrabold ibm-plex-mono-regular`} style={{
+            <h1 className={`encryptClassH2 relative tracking-wide font-extrabold ibm-plex-mono-regular `} style={{
                 marginLeft: `${marginLeft}px`,
                 transition: `margin ${transitionTime}s`,
                 fontSize: `${fontSize}px`,
