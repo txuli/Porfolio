@@ -8,7 +8,8 @@ import LogIn from './pages/LogIn'
 import { Routes, Route } from 'react-router-dom'
 import Projects from './pages/Projects'
 import Title from './components/Title'
-
+import Cv from './pages/Cv'
+import Page404 from './pages/page404'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,7 +27,8 @@ function App() {
       <Route path= {'/about'} element = {<About/>}/>
       <Route path={'/projects'} element= {<Projects/>}/>
       <Route path={'/logIn'} element= {<LogIn/>}/>
-      <Route path={'*'} element={<Home/>}/>
+      <Route path={'/cv'} element={<Cv/>}/>
+      <Route path={'*'} element={<Page404/>}/>
     </Routes>
     </>
   )
