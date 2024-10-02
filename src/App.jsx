@@ -5,15 +5,14 @@ import NavBar from './components/NavBar'
 import Home from './pages/home'
 import About from './pages/about'
 import LogIn from './pages/LogIn'
-import { Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Projects from './pages/Projects'
 import Title from './components/Title'
 import Cv from './pages/Cv'
 import Page404 from './pages/page404'
 
 function App() {
-  const isNavBarVisible = location.pathname !== '/404';
-
+  
   
     return (
       <>

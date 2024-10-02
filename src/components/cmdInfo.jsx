@@ -8,7 +8,25 @@ function CmdInfo() {
         alert('Are you sure you want to leave this page?');
         window.location.href = 'https://i0.wp.com/exploramag.com/wp-content/uploads/2023/03/sapo-1.jpg?resize=1360%2C907&ssl=1';
     }
+    const [value, setValue] = useState('');
+    
+    
+   
 
+    const change = (event) => {
+        const newValue = event.target.value;  // Capturamos el nuevo valor
+        setValue(newValue);
+        
+        // Comprobamos si el comando es correcto
+        console.log('Input value:', newValue); // Muestra el valor actual
+        if (newValue.trim() == 'cat /about') {
+            console.log('Redirigiendo a /about');
+            window.location.href ='/about'
+        } else if (newValue.trim() == 'cat /projects') {
+            console.log('Redirigiendo a /projects');
+            window.location.href ='/projects'
+        }
+    }
     return (
         <>
             {screenWidth > 1000 ? (
@@ -54,7 +72,7 @@ function CmdInfo() {
                                     root@txuli: /portfolio/txuli$
                                 </div>
                             </div>
-                            <textarea name="commandLine" id="1" placeholder='Write different commands' className='w-full h-8 resize-none bg-black border-none focus:outline-none col-span-4'></textarea>
+                            <textarea name="commandLine" id="1" value={value} onChange={change} placeholder='Write different commands' className='w-full h-8 resize-none bg-black border-none focus:outline-none col-span-4'></textarea>
                         </div>
 
                     </div>
