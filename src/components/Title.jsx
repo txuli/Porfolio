@@ -2,7 +2,7 @@ import React from 'react';
 import Effect from './Effect';
 export default function Title() {
      const Name = "Txuli's"
-      const Text = 'Portfolio'
+      
         return (
             
            <>
@@ -14,6 +14,7 @@ export default function Title() {
             randCar={null}
             fontSize={60}
             marginLeftDiv={30}
+            
             />
            
            </>
