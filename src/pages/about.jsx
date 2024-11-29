@@ -2,7 +2,7 @@ import NavBar from '../components/NavBar'
 
 const About = () =>{
     return (
-        <div className="h-screen">
+        <div className="">
             
             <div className='my-7 w-full grid grid-cols-7'>
             <div className='col-start-2 col-span-2'>
