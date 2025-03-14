@@ -1,10 +1,10 @@
-import NavBar from '../components/NavBar'
-import Footer from '../components/footer';
+
 import Effect from '../components/Effect';
+import Template from '../components/templateProjects';
 const projects = () => {
     return (
         <div>
-             <header>
+             
                 
                 
                 <Effect
@@ -17,11 +17,15 @@ const projects = () => {
                     marginLeftDiv={30}
                     
                 />
-            </header>
-            <div className='h-96 mt-11 flex justify-center'>
-                <p><b>the projects are too early version to show them, if you want to follow these projects when they were available please visit my <a href="https://github.com/Txuli17" target="_blank" rel="github link" className='text-blue-600 '>GitHub</a>:)</b></p>
-            </div>
             
+            {/* <div className='h-96 mt-11 flex justify-center'>
+                <p><b>the projects are too early version to show them, if you want to follow these projects when they were available please visit my <a href="https://github.com/Txuli17" target="_blank" rel="github link" className='text-blue-600 '>GitHub</a>:)</b></p>
+            
+            </div> */}
+            <section className='px-20 flex  w-full justify-center'>
+            <Template/> 
+            </section>
+          
         </div>
     )
 }

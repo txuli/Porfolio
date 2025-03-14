@@ -47,7 +47,7 @@ export default function Effect({ text, mLeftInicial = -180, transitionTime = 2, 
     }, [])
 
     return (
-        <div style={{
+        <div className="h-20" style={{
             marginLeft: `${marginLeftDiv}px`,
         }}>
             <h1 className={`encryptClassH2 relative tracking-wide font-extrabold ibm-plex-mono-regular `} style={{
