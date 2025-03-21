@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ImgMenu from './media/home.svg';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [isInUpperZone, setIsInUpperZone] = useState(false);
@@ -72,27 +73,27 @@ const NavBar = () => {
                   isInUpperZone || isMobile ? 'opacity-100 delay-350' : 'opacity-0'
                 }`}
               >
-                <a href="/projects" className="text-white">
+                <Link to="/projects" className="text-white">
                   Projects
-                </a>
+                </Link>
               </div>
               <div
                 className={`${
                   isInUpperZone || isMobile ? 'opacity-100 delay-350' : 'opacity-0'
                 }`}
               >
-                <a href="/about" className="text-white">
+                {/* <a href="/about" className="text-white">
                   About
-                </a>
+                </a> */}
               </div>
               <div
                 className={`${
                   isInUpperZone || isMobile ? 'opacity-100 delay-350' : 'opacity-0'
                 }`}
               >
-                <a href="/logIn" className="text-white">
+                {/* <a href="/logIn" className="text-white">
                   Log In
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

@@ -1,152 +1,100 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './font.css';
 import InfoDiv from './infoDiv';
+import nextjs from './media/next.svg';
+import ts from './media/ts.svg';
+import js from './media/js.svg';
+import tailwind from './media/tailwind.svg';
+import { Link } from 'react-router-dom';
 
 function CmdInfo() {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [value, setValue] = useState('');
+
+    useEffect(() => {
+        const handleResize = () => setScreenWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const sapo = () => {
         alert('Are you sure you want to leave this page?');
         window.location.href = 'https://i0.wp.com/exploramag.com/wp-content/uploads/2023/03/sapo-1.jpg?resize=1360%2C907&ssl=1';
-    }
-    const [value, setValue] = useState('');
-
-
-
+    };
 
     const change = (event) => {
-        const newValue = event.target.value;  
+        const newValue = event.target.value.trim();
         setValue(newValue);
-
-       
-        console.log('Input value:', newValue);
-        if (newValue.trim() == 'cat /about') {
-
-            window.location.href = '/about'
-            console.log('Redirigiendo a /about');
-        } else if (newValue.trim() == 'cat /projects') {
-            console.log('Redirigiendo a /projects');
-            window.location.href = '/projects'
+        if (newValue === 'cat /about') {
+            window.location.href = '/about';
+        } else if (newValue === 'cat /projects') {
+            window.location.href = '/projects';
         }
-    }
+    };
+
     return (
-        <>
-            {screenWidth > 1200 ? (
-                <div className=' flex justify-center '>
-                    <div className='h-3/6 w-3/6 border-neutral-600 bg-black rounded-md border-2 relative mt-2 ml-9 '>
-                        <div className='w-full bg-gray-600/ h-7 relative grid grid-cols-3 '>
-                            <div className='w-full bg-gray-600/ h-7 relative flex items-center ml-2'>
-                                <div className='h-3 w-3 rounded-full bg-red-700 mr-1 hover:animate-breathing' onClick={sapo}></div>
-                                <div className='h-3 w-3 rounded-full bg-yellow-500 mr-1 hover:animate-breathing'></div>
-                                <div className='h-3 w-3 rounded-full bg-green-700 mr-1 hover:animate-breathing'></div>
-                            </div>
-                            <div className='flex justify-center'>
-                                root@txuli: /portfolio/txuli
-                            </div>
-                            <div>
-                            </div>
-
-                        </div>
-                        <div className=' w-full flex pl-1 '>
-                            <div className='mr-2'>root@txuli: /portfolio/txuli$</div> <div> cat /about</div>
-                        </div>
-                        <div>
-                            <div className='ibm-plex-mono-regular h-96'>
-                                <InfoDiv Text='username' Text2='Txuli' />
-
-                                <div className='flex pl-2'>
-                                    <div className='mr-2 text-gray-600 '>
-                                        bio:
-                                    </div>
-                                    <div className='w-96'>
-                                        I have been programming since August 2023, and I am passionate about photography. If I'm not cycling or capturing the world with my camera, I'm writing code.
-                                    </div>
-
-                                </div>
-                                <InfoDiv Text='Developer Since' Text2='August 2023 (seriously programming since May 2024)' />
-                                <InfoDiv Text='Hobbies' Text2='Photgraphy' />
-                            </div>
-                        </div>
-                        <div className='grid  grid-cols-6'>
-                            <div
-                                className=' col-span-2'>
-                                <div className='ml-1'>
-                                    root@txuli: /portfolio/txuli$
-                                </div>
-                            </div>
-                            <div className=' col-span-4'>
-                                <textarea name="commandLine" id="1" value={value} onChange={change} placeholder='Write different commands' className='w-full h-8 resize-none bg-black border-none focus:outline-none '></textarea>
-                                <div className='fixed my-1 bg-neutral-700/50 rounded-lg w-48'>
-                                    {/* <div>
-                                    cat /projects
-                                    </div>
-                                    <div>
-                                    cat /about
-                                    </div> */}
-                                </div>
-                            </div>
-                        </div>
-
+        <div className="flex justify-center lg:w-full w-96 mx-auto">
+            <div className="border-2 border-neutral-600 bg-black rounded-md mt-2 p-3 w-full max-w-4xl">
+                {/* Barra superior */}
+                <div className="w-full  h-7 flex items-center px-2 ">
+                    <div className="flex space-x-1">
+                        <div className="h-3 w-3 rounded-full bg-red-700 hover:animate-breathing" onClick={sapo}></div>
+                        <div className="h-3 w-3 rounded-full bg-yellow-500 hover:animate-breathing"></div>
+                        <div className="h-3 w-3 rounded-full bg-green-700 hover:animate-breathing"></div>
                     </div>
-                </div>) : (
-                <div className=' flex justify-center w-full'>
-                    <div className='h-4/6 w-5/6 border-neutral-600 bg-black rounded-md border-2 relative mt-1 '>
-                        <div className='w-full bg-gray-600/ h-7 relative grid grid-cols-3 '>
-                            <div className='w-full bg-gray-600/ h-7 relative flex items-center ml-2'>
-                                <div className='h-3 w-3 rounded-full bg-red-700 mr-1 hover:animate-breathing' onClick={sapo}></div>
-                                <div className='h-3 w-3 rounded-full bg-yellow-500 mr-1 hover:animate-breathing'></div>
-                                <div className='h-3 w-3 rounded-full bg-green-700 mr-1 hover:animate-breathing'></div>
-                            </div>
-                            <div className='flex col-span-2 text-center'>
-                                root@txuli: /portfolio/txuli
-                            </div>
-                            <div>
-                            </div>
-
-                        </div>
-                        <div className=' w-full flex pl-1 pt-6'>
-                            <div className='mr-2'>root@txuli: /portfolio/txuli$</div>
-
-                        </div>
-                        <div> cat /about</div>
-                        <div>
-                            <div className='ibm-plex-mono-regular h-96'>
-                                <InfoDiv Text='username' Text2='Txuli' />
-
-                                <div className='flex pl-2'>
-                                    <div className='mr-2 text-gray-600 '>
-                                        bio:
-                                    </div>
-                                    <div className='w-96'>
-                                        I have been programming since August 2023, and I am passionate about photography. If I'm not cycling or capturing the world with my camera, I'm writing code.
-                                    </div>
-
-                                </div>
-                                <InfoDiv Text='Developer Since' Text2='August 2023 (seriously programming since May 2024)' />
-                                <InfoDiv Text='Hobbies' Text2='Photgraphy' />
-                            </div>
-                        </div>
-                        <div className='grid  grid-cols-6'>
-                            <div
-                                className=' col-span-2'>
-                                <div className='ml-1'>
-                                    root@txuli: /portfolio/txuli$
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
+                    <div className="text-sm mx-auto">root@txuli: /portfolio/txuli</div>
                 </div>
 
-            )}
+                {/* Consola principal */}
+                <div className="p-2">
+                    <div className="text-green-500">root@txuli: /portfolio/txuli$ cat /about</div>
+                    <section className="ibm-plex-mono-regular">
+                        <InfoDiv Text="username" Text2="Txuli" />
+                        <article className="flex flex-col sm:flex-row sm:items-center pl-2">
+                            <div className="text-gray-600">bio:</div>
+                            <div className="sm:ml-2 w-3/4">
+                                I have been programming since August 2023, and I am passionate about photography.
+                                If I'm not cycling or capturing the world with my camera, I'm writing code.
+                            </div>
+                        </article>
+                        <article>
+                        <InfoDiv Text="Hobbies:" Text2="Photography" />
+                        </article>
+                        <article className="flex flex-col sm:flex-row sm:items-center pl-2 mt-3">
+                            <div className="text-gray-600">Tech stack:</div>
+                            <div className="sm:ml-2 w-3/4">
+                                In 2024 I started learning React.js and TailwindCSS. During my Erasmus in Prague, I learned Next.js.
+                                Also, during my project <Link to="/projects" className='text-purpleSymply underline'>DurangaldekoBZK Page</Link>, I started using APIs with TypeScript.
+                            </div>
+                        </article>
 
+                        {/* Tech Stack Icons */}
+                        <div className="flex justify-center gap-4 my-4">
+                            <img src={nextjs} alt="nextjs icon" className="h-10 sm:h-12" />
+                            <img src={ts} alt="typescript icon" className="h-10 sm:h-12" />
+                            <img src={js} alt="javascript icon" className="h-10 sm:h-12" />
+                            <img src={tailwind} alt="tailwindCSS icon" className="h-10 sm:h-12" />
+                        </div>
 
+                        <InfoDiv Text="Developer Since" Text2="August 2023" />
+                        
+                    </section>
+                </div>
 
-
-
-        </>
-
-    )
-};
+                {/* Entrada de Comandos */}
+                <div className="flex items-center p-2 border-t border-neutral-600">
+                    <span className="text-green-500">root@txuli: /portfolio/txuli$</span>
+                    {/* <input
+                        type="text"
+                        value={value}
+                        onChange={change}
+                        placeholder="Write different commands"
+                        className="bg-black text-white ml-2 outline-none w-full sm:w-auto"
+                    /> */}
+                </div>
+            </div>
+        </div>
+    );
+}
 
 export default CmdInfo;
