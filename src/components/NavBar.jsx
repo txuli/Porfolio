@@ -67,7 +67,7 @@ const NavBar = () => {
             </div>
 
             {/* Enlaces */}
-            <div className={`absolute flex items-center gap-4 justify-end w-80`}>
+            <div className={`absolute flex items-center  right-3 `}>
               <div
                 className={`${
                   isInUpperZone || isMobile ? 'opacity-100 delay-350' : 'opacity-0'

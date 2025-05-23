@@ -48,16 +48,16 @@ function CmdInfo() {
                 {/* Consola principal */}
                 <div className="p-2">
                     <div className="text-green-500">root@txuli: /portfolio/txuli$ cat /about</div>
-                    <section className="ibm-plex-mono-regular">
+                    <section className="ibm-plex-mono-regular my-3">
                         <InfoDiv Text="username" Text2="Txuli" />
-                        <article className="flex flex-col sm:flex-row sm:items-center pl-2">
+                        <article className="flex flex-col sm:flex-row sm:items-center pl-2 mt-3">
                             <div className="text-gray-600">bio:</div>
-                            <div className="sm:ml-2 w-3/4">
+                            <div className="sm:ml-2 w-3/ ">
                                 I have been programming since August 2023, and I am passionate about photography.
                                 If I'm not cycling or capturing the world with my camera, I'm writing code.
                             </div>
                         </article>
-                        <article>
+                        <article className='mt-3'>
                         <InfoDiv Text="Hobbies:" Text2="Photography" />
                         </article>
                         <article className="flex flex-col sm:flex-row sm:items-center pl-2 mt-3">
@@ -76,7 +76,7 @@ function CmdInfo() {
                             <img src={tailwind} alt="tailwindCSS icon" className="h-10 sm:h-12" />
                         </div>
 
-                        <InfoDiv Text="Developer Since" Text2="August 2023" />
+                        <InfoDiv Text="Developer Since" Text2="August 2023"  />
                         
                     </section>
                 </div>
