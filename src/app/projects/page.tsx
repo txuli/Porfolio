@@ -26,7 +26,7 @@ export default async function Projects() {
 
       <section className="px-20  w-full justify-center grid xl:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 my-auto relative">
         {repoMap.map((repo, index )=>(
-          <TemplateProjects key={index} img={'https://opengraph.githubassets.com/0/txuli/'+ repo.name} topics={repo.topics} name={repo.name}/> 
+          <TemplateProjects key={index} img={'https://opengraph.githubassets.com/0/txuli/'+ repo.name} topics={repo.topics} name={repo.name} url={repo.html_url}/> 
         ))}
         
       </section>

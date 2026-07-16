@@ -4,10 +4,10 @@ type TemplateProjectsProps = {
   img: string;
   name: string;
   topics?: string[];
-  
+  url:string;
 };
 
-const TemplateProjects = ({ img, name, topics = [] }: TemplateProjectsProps) => {
+const TemplateProjects = ({ img, name,url, topics = [] }: TemplateProjectsProps) => {
   return (
     <article className="max-w-sm  bg-gray-600/50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all my-5 mx-auto">
       <div className="relative">
@@ -29,7 +29,7 @@ const TemplateProjects = ({ img, name, topics = [] }: TemplateProjectsProps) => 
 
         <button
           className="w-full bg-purpleSymply/40 hover:bg-purpleSymply/30 text-white font-medium py-3 rounded-lg transition-colors"
-          onClick={() => window.open("https://github.com/txuli/durangaldekobizikletaeskola.com")}
+          onClick={() => window.open(url)}
         >
           View repo
         </button>
