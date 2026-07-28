@@ -2,6 +2,18 @@ import Effect from "@/components/Effect";
 import TemplateProjects from "@/components/TemplateProjects";
 import { headers } from "next/headers";
 
+const FALLBACK_IMG = "/media/github-mark-white.png";
+
+async function getRepoImage(repoName: string) {
+  const url = `https://opengraph.githubassets.com/0/txuli/${repoName}`;
+  try {
+    const res = await fetch(url, { method: "HEAD" });
+    return res.ok ? url : FALLBACK_IMG;
+  } catch {
+    return FALLBACK_IMG;
+  }
+}
+
 export default async function Projects() {
   const repos = await fetch('https://api.github.com/users/txuli/repos', {
     headers: {
@@ -11,7 +23,14 @@ export default async function Projects() {
   });
   const response = await repos.json();
   const repoMap = Array.isArray(response) ? response : [];
- 
+
+  const reposWithImages = await Promise.all(
+    repoMap.map(async (repo) => ({
+      ...repo,
+      img: await getRepoImage(repo.name),
+    }))
+  );
+
   return (
     <div>
       <Effect
@@ -25,8 +44,8 @@ export default async function Projects() {
       />
 
       <section className="px-20  w-full justify-center grid xl:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 my-auto relative">
-        {repoMap.map((repo, index )=>(
-          <TemplateProjects key={index} img={'https://opengraph.githubassets.com/0/txuli/'+ repo.name} topics={repo.topics} name={repo.name} url={repo.html_url}/> 
+        {reposWithImages.map((repo, index )=>(
+          <TemplateProjects key={index} img={repo.img} topics={repo.topics} name={repo.name} url={repo.html_url}/>
         ))}
         
       </section>
